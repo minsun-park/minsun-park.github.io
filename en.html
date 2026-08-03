@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Minsun Park — Resume</title>
+<style>
+  @page { size: letter; margin: 9.5mm 13mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 9.1pt; line-height: 1.25; color: #111; margin: 0;
+    -webkit-print-color-adjust: exact;
+  }
+  h1 { font-size: 16pt; margin: 0 0 2px; letter-spacing: .3px; }
+  .contact { font-size: 8.5pt; color: #333; margin-bottom: 7px; }
+  .contact a { color: #111; text-decoration: none; }
+  .headline { font-weight: 700; font-size: 9.3pt; margin-bottom: 7px; }
+  h2 {
+    font-size: 9pt; text-transform: uppercase; letter-spacing: 1.1px;
+    border-bottom: 1px solid #222; padding-bottom: 2px; margin: 8px 0 4px;
+  }
+  .summary { margin: 0 0 2px; }
+  .job { margin-bottom: 6px; }
+  .jobhead { display: flex; justify-content: space-between; align-items: baseline; }
+  .role { font-weight: 700; }
+  .org { font-weight: 400; }
+  .date { font-size: 8.5pt; color: #444; white-space: nowrap; padding-left: 10px; }
+  ul { margin: 2px 0 0; padding-left: 15px; }
+  li { margin-bottom: 2px; }
+  .tight li { margin-bottom: 1px; }
+  .skills p { margin: 0 0 2px; }
+  .skills span { font-weight: 700; }
+  .edu { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px; }
+  @media print { .no-print { display: none; } }
+</style>
+</head>
+<body>
+<div style="margin:0 0 14px;display:flex;gap:8px;" class="no-print">
+  <a href="index.html" style="border:1px solid #ccc;border-radius:8px;padding:5px 13px;font-size:9pt;color:#111;text-decoration:none;">한국어</a>
+  <button onclick="window.print()" style="border:1px solid #ccc;border-radius:8px;padding:5px 13px;font-size:9pt;background:#f6f6f6;cursor:pointer;font-family:inherit;">Save as PDF</button>
+</div>
+
+<h1>Minsun Park</h1>
+<div class="contact">
+  Seoul, South Korea &nbsp;·&nbsp; parkminsun0508@gmail.com &nbsp;·&nbsp; +82 10-9163-3808 &nbsp;·&nbsp;
+  <a href="https://github.com/minsun-park">github.com/minsun-park</a> &nbsp;·&nbsp;
+  <a href="https://www.linkedin.com/in/%EB%AF%BC%EC%84%A0-%EB%B0%95-467333237/">LinkedIn</a>
+</div>
+<div class="headline">Data Scientist — Recommendation, Ranking &amp; ML Systems</div>
+
+<h2>Summary</h2>
+<p class="summary">
+Data Scientist with 5 years of experience, specializing in recommendation and search systems built end to end —
+candidate retrieval, embedding-based ranking, and production serving at scale. I own both model quality and the pipelines
+behind it, and translate technical results into decisions non-technical stakeholders act on. Currently extending
+this work into ads-facing ranking and user representation learning. Fluent in English.
+</p>
+
+<h2>Experience</h2>
+
+<div class="job">
+  <div class="jobhead">
+    <div><span class="role">Data Scientist</span>, <span class="org">Kakao Style — AI Search &amp; Recommendation</span></div>
+    <div class="date">Sep 2024 – Present</div>
+  </div>
+  <ul>
+    <li>Built a user size prediction system <b>serving millions of users daily</b> — raised recommendation coverage
+      from <b>~80% to ~90%</b> (2× target) with ~91% top-3 accuracy validated on 10M+ purchase records, and designed
+      the confidence cutoff adopted as the serving standard.</li>
+    <li>Designed the company's first store-level trait system (<b>23,000 stores × 70+ features</b>) and a
+      similar-store recommendation engine blending text, SVD, and Fashion-CLIP embeddings in an OpenSearch kNN
+      stack; shipped to search personalization and <b>cut batch runtime 80%</b> (7–8 h → 1.5 h).</li>
+    <li>Migrated the production recommender from SageMaker to LightGCN on MLflow, <b>cutting training time 74%</b>
+      (9 h → 2 h 23 m) and <b>embedding API cost 67%</b>; validated KServe (Kubernetes) serving and integrated a
+      Kafka real-time attribute pipeline.</li>
+    <li>Replaced manual store labeling with a 6-class classifier (LLM similarity + Fashion-CLIP features;
+      3.8× random baseline), <b>scaling coverage 10× to 9,800 stores</b>, and ran a <b>5-arm A/B test</b> whose
+      diagnosis redirected the dataset and API to personalized banner targeting.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="jobhead">
+    <div><span class="role">Data Scientist</span>, <span class="org">Kolon Industries FnC</span></div>
+    <div class="date">Sep 2021 – Sep 2024</div>
+  </div>
+  <ul>
+    <li>Built <b>CTR-prediction-based personalized recommendations</b> with topic-modeling re-ranking for the
+      e-commerce storefront, and a browsing/cart-history recommender shipped to the personalized landing page.</li>
+    <li>Developed product-to-query retrieval models (BERT, DPR, ColBERT) for ad keyword extraction, and a
+      related-search recommender (FP-Growth) that cut search-page bounce rate from <b>10.9% to 5.4%</b>.</li>
+    <li>Built demand-forecasting models (Random Forest, LSTM, DNN) that halved reorder lead time
+      (<b>8 → 4 weeks</b>), and an SKU optimization model deployed company-wide (<b>−16% SKUs</b>; internal
+      excellence award).</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="jobhead">
+    <div><span class="role">Statistical Analyst Intern</span>, <span class="org">Bank of Korea</span></div>
+    <div class="date">Feb 2019 – Sep 2019</div>
+  </div>
+  <ul>
+    <li>Validated national balance-of-payments statistics (900+ line items) in SAS and R, detecting misreported
+      transactions whose corrections were reflected in official statistics.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="jobhead">
+    <div><span class="role">Data Analyst Intern</span>, <span class="org">Early Adopter (advertising agency)</span></div>
+    <div class="date">Oct 2016 – Jan 2017</div>
+  </div>
+  <ul>
+    <li>Analyzed user behavior and conversion funnels (Google Analytics) and ran an ad-channel A/B test
+      (blog vs. YouTube) — both adopted: YouTube as the main channel in the 2017 ad strategy, and a data-driven
+      content proposal that drew 1.34× the prior month's views.</li>
+  </ul>
+</div>
+
+<h2>Education</h2>
+<div class="edu">
+  <div><b>M.S., Applied Artificial Intelligence</b> — Korea University (expected Feb 2027)</div>
+  <div class="date">Mar 2024 – Present</div>
+</div>
+<div class="edu">
+  <div><b>B.S., Applied Statistics</b> — Chung-Ang University</div>
+  <div class="date">Mar 2015 – Feb 2021</div>
+</div>
+
+<h2>Skills</h2>
+<div class="skills">
+  <p><span>Languages &amp; Data:</span> Python, SQL, PySpark, Spark</p>
+  <p><span>ML &amp; Serving:</span> TensorFlow, MLflow, OpenSearch (kNN), Airflow, Databricks, Kafka, Kubernetes (KServe)</p>
+  <p><span>Cloud:</span> GCP (BigQuery, GCS) · AWS (SageMaker, Bedrock, EMR, Athena, S3)</p>
+  <p><span>Languages:</span> Korean (native) · English (full professional proficiency, TOEIC 960)</p>
+</div>
+
+<h2>Honors &amp; Awards</h2>
+<ul class="tight">
+  <li><b>1st Place, AWS AI Agent Workshop</b> (2026) — designed and built an agent that recommends sizes to minimize returns</li>
+  <li><b>Man of Kolon Award</b> (2024) — company-wide recognition for an SKU optimization model deployed to production</li>
+  <li><b>1st Place, SSAFY 6th Hackathon</b> (2021) — destination recommendation service from public bike-share ride histories</li>
+</ul>
+
+<h2>Research &amp; Knowledge Sharing</h2>
+<ul class="tight">
+  <li>Thesis in progress: <b>filtered approximate nearest neighbor search over HNSW indexes</b> (pre-filter path
+    fragmentation vs. post-filter recall loss)</li>
+  <li>Run an automated research radar over SOTA model releases and papers (recommendation, ranking, NLP) and share
+    applicable findings with the team weekly, beyond my own workstream</li>
+  <li>Proposed and seeded a team-wide practice of documenting AI failure patterns into shared team guidelines</li>
+</ul>
+
+</body>
+</html>
