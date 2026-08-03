@@ -28,11 +28,11 @@
     margin: 0; background: var(--bg); color: var(--fg);
     font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
                  "Segoe UI", Roboto, sans-serif;
-    font-size: 15.5px; line-height: 1.75;
+    font-size: 14px; line-height: 1.7;
     -webkit-font-smoothing: antialiased;
     transition: background .2s, color .2s;
   }
-  .wrap { max-width: 760px; margin: 0 auto; padding: 56px 24px 0; }
+  .wrap { max-width: 768px; margin: 0 auto; padding: 48px 24px 0; }
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
 
@@ -44,69 +44,62 @@
     padding: 6px 14px; font-size: .85rem; font-family: inherit;
   }
   .btn:hover { border-color: var(--accent); color: var(--accent); }
-  header h1 { font-size: 2.1rem; margin: 0 0 2px; letter-spacing: -0.02em; }
-  .role { color: var(--muted); font-weight: 600; margin: 0 0 10px; font-size: 1.05rem; }
-  .contact { font-size: .9rem; color: var(--muted); }
+  header h1 { font-size: 1.25rem; margin: 0 0 2px; letter-spacing: -0.01em; }
+  .role { color: var(--muted); font-weight: 500; margin: 0 0 8px; font-size: .95rem; }
+  .contact { font-size: .8rem; color: var(--muted); }
   .contact a { color: var(--muted); border-bottom: 1px solid var(--line); }
   .contact a:hover { color: var(--accent); text-decoration: none; }
 
   /* ---------- intro ---------- */
-  .intro { margin-top: 40px; }
-  .intro .para { margin-bottom: 28px; }
-  .intro .lead { font-size: 1.2rem; font-weight: 800; letter-spacing: -0.01em; margin: 0 0 6px; }
+  .intro { margin-top: 36px; }
+  .intro .para { margin-bottom: 22px; }
+  .intro .lead { font-size: 1rem; font-weight: 700; letter-spacing: -0.01em; margin: 0 0 4px; }
   .intro p { margin: 0; color: var(--fg); }
 
   /* ---------- section title ---------- */
   h2.sec {
-    font-size: 1.5rem; letter-spacing: -0.02em; margin: 64px 0 28px;
+    font-size: 1.125rem; letter-spacing: -0.01em; margin: 44px 0 22px;
   }
 
-  /* ---------- timeline ---------- */
-  .timeline { position: relative; padding-left: 28px; }
-  .timeline::before {
-    content: ""; position: absolute; left: 7px; top: 6px; bottom: 6px;
-    width: 3px; border-radius: 2px; background: var(--accent); opacity: .55;
+  /* ---------- divider ---------- */
+  hr.divider {
+    border: 0; border-top: 2px solid var(--accent);
+    margin: 56px 0 0; opacity: .8;
   }
-  .company { position: relative; margin-bottom: 56px; }
-  .company::before {
-    content: ""; position: absolute; left: -28px; top: 7px;
-    width: 17px; height: 17px; border-radius: 50%;
-    background: var(--dot, var(--muted));
-    border: 3px solid var(--bg);
-    box-shadow: 0 0 0 2px var(--dot, var(--muted));
+
+  /* ---------- experience ---------- */
+  .timeline { position: relative; }
+  .company { position: relative; margin-bottom: 44px; }
+  .company > h3 { font-size: 1rem; margin: 0; letter-spacing: -0.01em; }
+  .company.kakao > h3 { color: #e0b400; }
+  [data-theme="dark"] .company.kakao > h3 { color: var(--kakao); }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .company.kakao > h3 { color: var(--kakao); }
   }
-  .company.kakao { --dot: var(--kakao); }
-  .company.kolon { --dot: var(--kolon); }
-  .company.gray  { --dot: var(--muted); }
+  .company.kolon > h3 { color: var(--kolon); }
+  .meta { color: var(--muted); font-size: .78rem; margin: 2px 0 0; }
 
-  .company > h3 { font-size: 1.25rem; margin: 0; letter-spacing: -0.01em; }
-  .meta { color: var(--muted); font-size: .9rem; margin: 2px 0 0; }
+  .part { margin-top: 18px; }
+  .part h4 { font-size: .9rem; margin: 0; color: var(--fg); }
+  .part .period { color: var(--muted); font-weight: 400; font-size: .78rem; margin-left: 6px; }
 
-  .part { margin-top: 22px; }
-  .part h4 { font-size: 1rem; margin: 0; color: var(--fg); }
-  .part .period { color: var(--muted); font-weight: 400; font-size: .875rem; margin-left: 6px; }
-
-  .proj { margin-top: 16px; }
-  .proj h5 { font-size: .95rem; margin: 0 0 3px; font-weight: 700; }
-  .proj ul { margin: 2px 0 0; padding-left: 18px; color: var(--muted); font-size: .91rem; }
+  .proj { margin-top: 13px; }
+  .proj h5 { font-size: .875rem; margin: 0 0 2px; font-weight: 700; }
+  .proj ul { margin: 2px 0 0; padding-left: 17px; color: var(--muted); font-size: .855rem; }
   .proj li { margin: 2px 0; }
   .proj li::marker { color: var(--line); }
 
   /* ---------- etc (gray band) ---------- */
   .etc-band { background: var(--etc-bg); border-top: 1px solid var(--line); margin-top: 72px; }
-  .etc-band .wrap { padding-top: 40px; padding-bottom: 72px; }
-  .etc-band h2 { font-size: 1.5rem; letter-spacing: -0.02em; margin: 32px 0 18px; }
+  .etc-band .wrap { padding-top: 36px; padding-bottom: 64px; }
+  .etc-band h2 { font-size: 1.125rem; letter-spacing: -0.01em; margin: 30px 0 14px; }
   .etc-band h2:first-child { margin-top: 0; }
-  .row { display: flex; justify-content: space-between; align-items: baseline; margin-top: 12px; flex-wrap: wrap; }
+  .row { display: flex; justify-content: space-between; align-items: baseline; margin-top: 10px; flex-wrap: wrap; }
   .row b { font-weight: 700; }
-  .row .period { color: var(--muted); font-size: .875rem; }
-  .row .sub { width: 100%; color: var(--muted); font-size: .9rem; }
-  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
-  .chip {
-    background: var(--bg); border: 1px solid var(--line); border-radius: 6px;
-    padding: 3px 10px; font-size: .85rem;
-  }
-  footer { margin-top: 48px; color: var(--muted); font-size: .85rem; }
+  .row .period { color: var(--muted); font-size: .78rem; }
+  .row .sub { width: 100%; color: var(--muted); font-size: .82rem; }
+  .skill-lines p { margin: 7px 0; font-size: .875rem; }
+  footer { margin-top: 44px; color: var(--muted); font-size: .78rem; }
 
   @media print {
     .top-btns { display: none; }
@@ -165,6 +158,8 @@
     <a href="https://github.com/minsun-park/filtered-ann-hnsw">직접 실험</a>하며 해결하고 있습니다.</p>
   </div>
 </section>
+
+<hr class="divider">
 
 <h2 class="sec">Work Experience</h2>
 
@@ -408,18 +403,11 @@
     </div>
 
     <h2>Skills</h2>
-    <div class="chips">
-      <span class="chip">Python</span><span class="chip">SQL</span><span class="chip">PySpark</span>
-      <span class="chip">TensorFlow</span><span class="chip">PyTorch</span><span class="chip">MLflow</span>
-      <span class="chip">Airflow</span><span class="chip">Databricks</span><span class="chip">OpenSearch</span>
-      <span class="chip">Kafka</span><span class="chip">Kubernetes</span><span class="chip">BigQuery</span>
-      <span class="chip">GCP</span><span class="chip">AWS</span>
-    </div>
-
-    <h2>Languages</h2>
-    <div class="row">
-      <span><b>영어</b> — 원어민 수준 소통 가능</span>
-      <span class="period">TOEIC 960 · TOEIC Speaking Lv.7</span>
+    <div class="skill-lines">
+      <p><b>Languages &amp; Data:</b> Python, SQL, PySpark, Spark</p>
+      <p><b>ML &amp; Serving:</b> TensorFlow, MLflow, OpenSearch (kNN), Airflow, Databricks, Kafka, Kubernetes (KServe)</p>
+      <p><b>Cloud:</b> GCP (BigQuery, GCS) · AWS (SageMaker, Bedrock, EMR, Athena, S3)</p>
+      <p><b>Languages:</b> Korean (native) · English (full professional proficiency, TOEIC 960)</p>
     </div>
 
     <h2>Awards</h2>
@@ -437,7 +425,7 @@
     </div>
 
     <footer>
-      마지막 업데이트: 2026.08 · <a href="https://github.com/minsun-park/minsun-park.github.io">GitHub Pages</a>로 운영됩니다.
+      ⓒ 2026 Minsun Park · 마지막 업데이트 2026.08
     </footer>
   </div>
 </div>
