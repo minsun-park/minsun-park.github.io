@@ -59,11 +59,6 @@
   .intro .lead { font-size: 1rem; font-weight: 700; letter-spacing: -0.01em; margin: 0 0 4px; }
   .intro p { margin: 0; color: var(--fg); }
 
-  .cap-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 24px; }
-  .cap-card { border: 1px solid var(--line); border-radius: 10px; padding: 15px 16px; background: var(--chip); }
-  .cap-card b { display: block; margin-bottom: 4px; font-size: .9rem; }
-  .cap-card span { color: var(--muted); font-size: .82rem; line-height: 1.55; }
-
   /* ---------- section title ---------- */
   h2.sec {
     font-size: 1.125rem; letter-spacing: -0.01em; margin: 44px 0 22px;
@@ -117,7 +112,6 @@
     .company { margin-bottom: 28px; }
     .etc-band { background: none; }
   }
-  @media (max-width: 620px) { .cap-grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -160,13 +154,6 @@
     <p>모델 구조뿐 아니라 임베딩 재생성, 색인과 서빙 버전 전환, 데이터 계약, 배치, latency, 실패 가시성과 배포 리스크를 함께 봅니다.
     잘 풀리지 않은 벡터 검색의 filtered recall 문제는 석사 학위논문으로 확장해 공개 벤치마크로
     <a href="https://github.com/minsun-park/filtered-ann-hnsw">직접 실험</a>하며 해결하고 있습니다.</p>
-  </div>
-
-  <div class="cap-grid">
-    <div class="cap-card"><b>Recommendation &amp; Ranking</b><span>CTR prediction, LightGCN, candidate retrieval, re-ranking, personalization</span></div>
-    <div class="cap-card"><b>Representation &amp; Content</b><span>Text/SVD/Fashion-CLIP embeddings, BERT·DPR·ColBERT, behavioral signals</span></div>
-    <div class="cap-card"><b>Evaluation, Experimentation &amp; Diagnosis</b><span>Large-scale evaluation, hypothesis testing, error analysis, A/B testing, root-cause investigation</span></div>
-    <div class="cap-card"><b>Production ML</b><span>MLflow, OpenSearch kNN, Kafka, Airflow, Databricks, KServe/Kubernetes</span></div>
   </div>
 </section>
 
