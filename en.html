@@ -43,7 +43,9 @@
   .action:hover, .action:focus-visible { border-color: #555; background: #fff; }
 
   @media screen {
-    body { max-width: 900px; margin: 0 auto; padding: 42px 32px 80px; font-size: 10.8pt; line-height: 1.52; }
+    :root { color-scheme: light; }
+    html { background: #fff; }
+    body { max-width: 900px; margin: 0 auto; padding: 42px 32px 80px; font-size: 10.8pt; line-height: 1.52; background: #fff; color: #111; }
   }
 
   @media screen and (max-width: 640px) {
@@ -67,7 +69,6 @@
 
 <nav class="top-actions no-print" aria-label="Resume actions">
   <a class="action" href="index.html">한국어</a>
-  <a class="action" href="assets/Minsun_Park_Resume.pdf" target="_blank" rel="noopener">View PDF</a>
   <a class="action" href="assets/Minsun_Park_Resume.pdf" download="Minsun_Park_Resume.pdf">Download PDF</a>
 </nav>
 
