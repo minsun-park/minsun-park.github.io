@@ -187,7 +187,7 @@
     <div class="proj">
       <h5>다중 임베딩 유사 스토어 추천 엔진, 배치 7~8시간 → 1.5시간 (80% 단축)</h5>
       <ul>
-        <li>텍스트(512d) + SVD 구매패턴(64d) + Fashion-CLIP 시각(64d) 임베딩 결합</li>
+        <li>보유 상품 구성 · 베스트셀러 · 썸네일 무드 3축 임베딩 가중 결합(text-embedding-3-large + Fashion-CLIP)</li>
         <li>OpenSearch function_score + kNN 구현, 검색 결과 상위 노출 및 추천 사유 제공</li>
         <li>전사 크루 정성평가 직접 설계·운영, 8개 이상 휴리스틱 가중치 반영</li>
       </ul>
